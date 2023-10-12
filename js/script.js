@@ -27,21 +27,23 @@ rndNumBtn.onclick = function () {
 
   cellDiv[rndNum].classList.add("border-pink");
 
-  alert("Numero " + (rndNum + 1));
+  console.log("Numero " + (rndNum + 1));
 };
 
 //Premendo il pulsante vai tombola seleziona tutti i numeri prcedentemente creati
 
-const createSmallCell = function (e) {
-  for (let i = 0; i < e; i++) {
+const createSmallCell = function (n) {
+  for (let i = 0; i < n; i++) {
+    const areaCard = document.getElementById("area-card");
+    const card = document.createElement("div");
+    card.className = "card";
+    areaCard.appendChild(card);
     for (let i = 0; i < 24; i++) {
-      const areaCard = document.getElementById("area-card");
-      const card = document.createElement("div");
-      card.className = "card";
       const smallCell = document.createElement("div");
 
       smallCell.className = "small-cell";
       const numSmallCell = document.createElement("p");
+
       const rndNumCard = [];
       let rndNum = 0;
       do {
@@ -52,14 +54,25 @@ const createSmallCell = function (e) {
 
       smallCell.appendChild(numSmallCell);
       card.appendChild(smallCell);
-      areaCard.appendChild(card);
     }
   }
 };
 //crea un numero di card in base al form
 
-const generetCard = createSmallCell(1);
+// const howMany = e => {
+//   e.preventDefault();
+//   const numTabelline = document.getElementById("num-tabelline").value;
+//   const
+// };
 
 window.addEventListener("DOMContentLoaded", () => {
   createCell(76);
+
+  const formTab = document.querySelector("form");
+  formTab.onsubmit = function (e) {
+    e.preventDefault();
+    const numTabelline = document.getElementById("num-tabelline");
+    const numTabellineNum = parseInt(numTabelline.value);
+    createSmallCell(numTabellineNum);
+  };
 });

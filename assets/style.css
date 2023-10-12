@@ -64,6 +64,7 @@ footer {
 form {
   font-size: 1.1rem;
   margin-left: 3rem;
+  margin-bottom: 2rem;
 }
 form label {
   color: white;
@@ -82,12 +83,14 @@ form button:hover {
 
 .card {
   display: inline-block;
-  width: 10%;
+  width: 48%;
+  margin: 2px;
   background-color: #0f101c;
   text-align: center;
   border: 1px solid white;
+  border-radius: 10px;
 }
-.smal-cell {
+.small-cell {
   display: inline-block;
   width: 7%;
   border: 2px solid #60085400;
@@ -95,6 +98,10 @@ form button:hover {
   margin: auto;
   text-align: center;
   cursor: pointer;
+}
+
+.small-cell:hover {
+  background-color: #17192b;
 }
 p {
   color: #8f167f;
