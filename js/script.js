@@ -17,10 +17,13 @@ const rndNumArray = [];
 
 rndNumBtn.onclick = function () {
   const cellDiv = document.querySelectorAll(".cell");
-  const rndNum = Math.ceil(Math.random() * 76);
+  let rndNum = 0;
+  do {
+    rndNum = Math.ceil(Math.random() * 76);
+  } while (rndNumArray.includes(rndNum));
+
   rndNumArray.push(rndNum);
-  rndNumArray.forEach(num=>)
-  if(rndNum=== )
+
   cellDiv[rndNum].classList.add("border-pink");
 
   alert("Numero " + (rndNum + 1));
