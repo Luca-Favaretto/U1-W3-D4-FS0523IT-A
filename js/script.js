@@ -36,20 +36,21 @@ const base = function () {
 };
 
 const trasfArray = function () {
-  var divs = document.querySelectorAll(".small-cell");
+  let divs = document.querySelectorAll(".small-cell");
 
-  var numeriArray = [];
+  let numeriArray = [];
 
   divs.forEach(function (div) {
-    var paragrafo = div.querySelector("p");
+    let paragrafo = div.querySelector("p");
     if (paragrafo) {
-      var numero = parseInt(paragrafo.textContent);
+      let numero = parseInt(paragrafo.textContent);
       numeriArray.push(numero);
     }
   });
 
   console.log(numeriArray);
 };
+//questa funzione quando lanciata trasforma le tabeliine in un array
 
 const createSmallCell = function (n) {
   for (let i = 0; i < n; i++) {
