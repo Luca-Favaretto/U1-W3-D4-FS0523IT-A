@@ -26,11 +26,30 @@ rndNumBtn.onclick = function () {
   rndNumArray.push(rndNum);
 
   cellDiv[rndNum].classList.add("border-pink");
-
   console.log("Numero " + (rndNum + 1));
 };
 
-//Premendo il pulsante vai tombola seleziona tutti i numeri prcedentemente creati
+const base = function () {
+  const smallCellTbl = document.querySelectorAll(".small-cell");
+
+  console.log(smallCellTbl);
+};
+
+const trasfArray = function () {
+  var divs = document.querySelectorAll(".small-cell");
+
+  var numeriArray = [];
+
+  divs.forEach(function (div) {
+    var paragrafo = div.querySelector("p");
+    if (paragrafo) {
+      var numero = parseInt(paragrafo.textContent);
+      numeriArray.push(numero);
+    }
+  });
+
+  console.log(numeriArray);
+};
 
 const createSmallCell = function (n) {
   for (let i = 0; i < n; i++) {
@@ -58,12 +77,6 @@ const createSmallCell = function (n) {
   }
 };
 //crea un numero di card in base al form
-
-// const howMany = e => {
-//   e.preventDefault();
-//   const numTabelline = document.getElementById("num-tabelline").value;
-//   const
-// };
 
 window.addEventListener("DOMContentLoaded", () => {
   createCell(76);
