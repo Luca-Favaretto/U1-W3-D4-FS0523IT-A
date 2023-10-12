@@ -25,7 +25,6 @@ main {
   border-radius: 4px;
   margin: auto;
   text-align: center;
-  height: 100%;
   cursor: pointer;
 }
 
@@ -79,4 +78,24 @@ form button {
 }
 form button:hover {
   box-shadow: none;
+}
+
+.card {
+  display: inline-block;
+  width: 10%;
+  background-color: #0f101c;
+  text-align: center;
+  border: 1px solid white;
+}
+.smal-cell {
+  display: inline-block;
+  width: 7%;
+  border: 2px solid #60085400;
+  border-radius: 4px;
+  margin: auto;
+  text-align: center;
+  cursor: pointer;
+}
+p {
+  color: #8f167f;
 }
