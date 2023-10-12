@@ -1,0 +1,82 @@
+* {
+  box-sizing: content-box;
+}
+body {
+  background-color: #17192b;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1 {
+  margin-top: 4rem;
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+}
+main {
+  margin: 4rem;
+  background-color: #0f101c;
+  padding: 1rem;
+  text-align: center;
+}
+.cell {
+  display: inline-block;
+  width: 7%;
+  border: 2px solid #60085400;
+  border-radius: 4px;
+  margin: auto;
+  text-align: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+.border-pink {
+  border: 2px solid #600854;
+}
+.cell:hover {
+  background-color: #17192b;
+}
+h3 {
+  font-size: 1rem;
+  color: #8f167f;
+}
+body > div {
+  margin: 2rem;
+  text-align: center;
+}
+
+#start-tombola {
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: #560a87;
+  color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #00000044;
+}
+#start-tombola:hover {
+  box-shadow: none;
+}
+
+footer {
+  margin: 4rem;
+}
+form {
+  font-size: 1.1rem;
+  margin-left: 3rem;
+}
+form label {
+  color: white;
+}
+
+form button {
+  background-color: #560a87;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #0000005d;
+}
+form button:hover {
+  box-shadow: none;
+}
